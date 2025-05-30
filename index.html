@@ -2,16 +2,333 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>I thought I came to study (but the campus studied me)</title>
+  <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="A 90-second film about what campuses do to people. Not the lectures. Not the parties. The way the walls lean in when you're alone." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   </head>
-  <body class="bg-black text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#film">Film</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#analysis">Analysis</a></li>
+      <li><a href="#trace">Trace</a></li>
+      <li><a href="#archive">Archive</a></li>
+      <li><a href="#filmmaker">Filmmaker</a></li>
+      <li><a href="#farewell">Farewell</a></li>
+    </ul>
+  </nav>
+
+  <!-- Landing background wrapper -->
+  <div class="landing-bg-wrapper">
+    <!-- Hero Section -->
+    <section id="home" class="section hero">
+      <div class="hero-content">
+        <h1 class="main-title">
+          I thought I came to study<br>
+          <span class="main-title-accent">(but the campus studied me)</span>
+        </h1>
+        <h2 class="hero-bold">This is a film about what campuses do to people.</h2>
+        <div class="hero-countdown-row">
+          <span id="countdown" class="hero-countdown"></span>
+          <span class="hero-countdown-label">until it's too late to leave</span>
+        </div>
+        <div class="glitch-row">
+          <span class="glitch accent" data-text="The campus is watching.">The campus is watching.</span>
+        </div>
+        <button id="scrollToFilm" class="cta-btn"><i class="fa fa-play"></i> Watch it happen</button>
+      </div>
+    </section>
+    <!-- Film Section -->
+    <section id="film" class="section">
+      <h1 class="section-title">Film</h1>
+      <div class="video-container aspect-video">
+        <iframe src="https://www.youtube.com/embed/AlQaNkHNYYw?modestbranding=1&rel=0" allowfullscreen></iframe>
+      </div>
+      <p class="section-desc">We didn't film it. We revealed it.</p>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h1 class="section-title">About the Film</h1>
+      <div class="about-grid">
+        <div class="about-left">
+          
+          <p class="body-text">I thought I came to study (but the campus studied me) is about a student who slowly begins to realize something unsettling. University is not just about classes or deadlines. It is about the spaces you move through every day. At first, those spaces seem ordinary: a dorm room, a humming laundry machine, a flickering hallway light, the soft glow of a laptop screen at three in the morning. But over time, the student senses something else. The campus is not just a backdrop. It is paying attention. It watches. It regulates. It does not ask anything directly, but somehow, you begin to change. Your thoughts. Your rhythms. Even your silences.</p>
+    
+          
+        </div>
+        <div class="about-right">
+          <p class="body-text">The film drifts quietly through these places. There are no fast cuts. No loud sounds. It invites you to slow down and feel. To notice. To ask: what is really shaping me here? This is not a scary story. There are no monsters. No villains. Just architecture. Routine. Quiet pressure.</p>
+          <p class="body-text">Shot entirely on location at NYU Abu Dhabi, using real campus spaces, the film tries to capture what it actually feels like to live on campus. Being busy but still stuck. Being watched, but not by cameras. Just by the space itself. The building. The air. The system. The film is short. Only ninety seconds. But it might stay with you longer.</p>
+    
+          
+        </div>
+      </div>
+      <div class="about-centered-text">
+        <p class="body-text italic accent">What space studied you?</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Analysis Section -->
+  <section id="analysis" class="section">
+    <h1 class="section-title">Analysis</h1>
+    <div class="carousel-container">
+      <div class="carousel-slides">
+        <!-- Slides will be dynamically added here by JavaScript -->
+        <!-- Slide 1 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/1.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/1.png" alt="Analysis thumbnail 1" />
+            </div>
+            <div class="slide-text">
+              <h2>The Empty Hallway</h2>
+              <p><b>The Surface:</b> A long, sterile hallway stretching toward nowhere, with fluorescent lights that flicker just slightly too often.</p>
+              <p><b>What the Campus Was Doing:</b> The hallway is designed to create the illusion of being observed. Notice how the light creates shadows that follow you from multiple angles.</p>
+              <p><b>Missed Detail:</b> <i>There\'s a shadow that appears for three frames with no visible source.</i></p>
+              <p><b>Reflection:</b> How often do you feel watched when nobody is there?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/2.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/2.png" alt="Analysis thumbnail 2" />
+            </div>
+            <div class="slide-text">
+              <h2>The Library at 3AM</h2>
+              <p><b>The Surface:</b> Empty chairs arranged in perfect symmetry. Books no one is reading. The sound of pages turning.</p>
+              <p><b>What the Campus Was Doing:</b> Time behaves differently here. The clocks run at 0.98x normal speed—just slow enough to be imperceptible but enough to keep you longer than you planned.</p>
+              <p><b>Missed Detail:</b> <i>The same student appears in the background three times, wearing three slightly different outfits.</i></p>
+              <p><b>Reflection:</b> When was the last time you checked a clock twice and felt something was wrong?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/3.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/3.png" alt="Analysis thumbnail 3" />
+            </div>
+            <div class="slide-text">
+              <h2>The Dining Hall</h2>
+              <p><b>The Surface:</b> Hundreds of conversations happening at once, blending into white noise. Food being consumed mechanically.</p>
+              <p><b>What the Campus Was Doing:</b> The acoustics are designed to amplify certain frequencies—making private conversations public while administrative announcements fade into the background.</p>
+              <p><b>Missed Detail:</b> <i>Every tray contains the exact same arrangement of food, down to the placement of silverware.</i></p>
+              <p><b>Reflection:</b> How much of your daily routine is your choice versus what the space decided for you?</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/4.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/4.png" alt="Analysis thumbnail 4" />
+            </div>
+            <div class="slide-text">
+              <h2>The Laundry Room</h2>
+              <p><b>The Surface:</b> Washing machines spinning in hypnotic rhythm. The sound of water being forced through fabric.</p>
+              <p><b>What the Campus Was Doing:</b> This is one of the few places where students can be alone with their thoughts, so the institution ensures it\'s as uncomfortable as possible. Notice the harsh lighting, the metallic surfaces that amplify sound.</p>
+              <p><b>Missed Detail:</b> <i>One washing machine never stops, even when unplugged.</i></p>
+              <p><b>Reflection:</b> What part of you has never been given permission to just be?'</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/5.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/5.png" alt="Analysis thumbnail 5" />
+            </div>
+            <div class="slide-text">
+              <h2>Analysis Title 5</h2>
+              <p><b>The Surface:</b> [Description for image 5]</p>
+              <p><b>What the Campus Was Doing:</b> [Analysis for image 5]</p>
+              <p><b>Missed Detail:</b> <i>[Missed detail for image 5]</i></p>
+              <p><b>Line from Script:</b> <span class="accent">"[Script line for image 5]"</span></p>
+              <p><b>Reflect:</b> [Reflection for image 5]</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 6 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/6.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/6.png" alt="Analysis thumbnail 6" />
+            </div>
+            <div class="slide-text">
+              <h2>Analysis Title 6</h2>
+              <p><b>The Surface:</b> [Description for image 6]</p>
+              <p><b>What the Campus Was Doing:</b> [Analysis for image 6]</p>
+              <p><b>Missed Detail:</b> <i>[Missed detail for image 6]</i></p>
+              <p><b>Line from Script:</b> <span class="accent">"[Script line for image 6]"</span></p>
+              <p><b>Reflect:</b> [Reflection for image 6]</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 7 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/7.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/7.png" alt="Analysis thumbnail 7" />
+            </div>
+            <div class="slide-text">
+              <h2>Analysis Title 7</h2>
+              <p><b>The Surface:</b> [Description for image 7]</p>
+              <p><b>What the Campus Was Doing:</b> [Analysis for image 7]</p>
+              <p><b>Missed Detail:</b> <i>[Missed detail for image 7]</i></p>
+              <p><b>Line from Script:</b> <span class="accent">"[Script line for image 7]"</span></p>
+              <p><b>Reflect:</b> [Reflection for image 7]</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 8 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/8.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/8.png" alt="Analysis thumbnail 8" />
+            </div>
+            <div class="slide-text">
+              <h2>Analysis Title 8</h2>
+              <p><b>The Surface:</b> [Description for image 8]</p>
+              <p><b>What the Campus Was Doing:</b> [Analysis for image 8]</p>
+              <p><b>Missed Detail:</b> <i>[Missed detail for image 8]</i></p>
+              <p><b>Line from Script:</b> <span class="accent">"[Script line for image 8]"</span></p>
+              <p><b>Reflect:</b> [Reflection for image 8]</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 9 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/9.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/9.png" alt="Analysis thumbnail 9" />
+            </div>
+            <div class="slide-text">
+              <h2>Analysis Title 9</h2>
+              <p><b>The Surface:</b> [Description for image 9]</p>
+              <p><b>What the Campus Was Doing:</b> [Analysis for image 9]</p>
+              <p><b>Missed Detail:</b> <i>[Missed detail for image 9]</i></p>
+              <p><b>Line from Script:</b> <span class="accent">"[Script line for image 9]"</span></p>
+              <p><b>Reflect:</b> [Reflection for image 9]</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 10 -->
+        <div class="full-bg-slide" style="background-image: url('src/assets/10.png');">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="src/assets/10.png" alt="Analysis thumbnail 10" />
+            </div>
+            <div class="slide-text">
+              <h2>Analysis Title 10</h2>
+              <p><b>The Surface:</b> [Description for image 10]</p>
+              <p><b>What the Campus Was Doing:</b> [Analysis for image 10]</p>
+              <p><b>Missed Detail:</b> <i>[Missed detail for image 10]</i></p>
+              <p><b>Line from Script:</b> <span class="accent">"[Script line for image 10]"</span></p>
+              <p><b>Reflect:</b> [Reflection for image 10]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+      <button class="carousel-control next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+      <div class="carousel-indicators">
+        <!-- Indicator dots will be added here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Trace Section -->
+  <section id="trace" class="section">
+    <h1 class="section-title">Trace</h1>
+    <div class="trace-content">
+      <h2 class="subheading">Leave Your Trace</h2>
+      <p class="body-text">What did the campus steal from you?</p>
+      <form id="traceForm">
+        <input type="text" id="traceInput" maxlength="20" placeholder="Enter one word" class="trace-input" />
+        <button type="submit" class="cta-btn"><i class="fa fa-paper-plane"></i> Submit to the Archive</button>
+      </form>
+      <div id="traceGrid" class="trace-grid"></div>
+    </div>
+  </section>
+
+  <!-- Archive Section -->
+  <section id="archive" class="section">
+    <h1 class="section-title">Archive</h1>
+    <div class="archive-cards">
+      <div class="archive-card">
+        <h2 class="subheading"><i class="fa fa-image"></i> Deleted Shadows</h2>
+        <p class="body-text">Stills and director notes from the cutting room floor.</p>
+      </div>
+      <div class="archive-card">
+        <h2 class="subheading"><i class="fa fa-envelope-open-text"></i> Letters to the Campus</h2>
+        <p class="body-text">Scenes that didn't make the final cut. The campus didn't want these stories told.</p>
+      </div>
+      <div class="archive-card">
+        <h2 class="subheading"><i class="fa fa-moon"></i> The Ritual</h2>
+        <p class="body-text">Visit this URL at 3AM on a full moon. You'll know why when you do.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filmmaker Section -->
+  <section id="filmmaker" class="section">
+    <h1 class="section-title">Filmmaker</h1>
+    <div class="filmmaker-card">
+      <img src="src/assets/myself.png" alt="Portrait of Mahlet Atresaw Andarge" class="filmmaker-img" />
+      <div class="filmmaker-text-content">
+        <h2 class="subheading">About the Filmmaker</h2>
+        <p class="body-text">Mahlet Atresaw Andarge is a filmmaker and student at NYU Abu Dhabi. Her work explores the subtle ways environments shape our inner lives, with a focus on memory, routine, and the architecture of feeling. She believes the spaces we inhabit are never neutral—they watch, they remember, and they change us.</p>
+        <h3 class="subheading">Contact Me</h3>
+        <p class="body-text">For questions, collaborations, or just to say hello:</p>
+        <a href="mailto:your.email@domain.com" class="accent">your.email@domain.com</a>
+        <div class="filmmaker-socials">
+          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+          <a href="mailto:your.email@domain.com"><i class="fa fa-envelope"></i> Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Farewell Section -->
+  <section id="farewell" class="section">
+    <h1 class="section-title">Farewell</h1>
+    <div class="farewell-content">
+      <p class="body-text">Deleting your visit history...</p>
+      <div class="progress-bar-bg">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <p class="body-text muted">Just kidding. Campuses never forget.</p>
+    </div>
+  </section>
+
+  <!-- Ambient Sound -->
+  <audio id="ambientSound" src="src/assets/wind-chime-atmos-185391.mp3" loop></audio>
+  <button id="toggleSound" class="ambient-btn" aria-label="Toggle Ambient Sound">
+    <i class="fas fa-volume-up"></i>
+    <i class="fas fa-volume-mute" style="display: none;"></i>
+  </button>
+
+  <script src="main.js"></script>
   </body>
 </html>
