@@ -46,14 +46,17 @@ const LandingPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70" />
         
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 md:px-8">
-          <motion.div className="max-w-2xl text-center" variants={staggerChildren}>
+          <div className="w-full text-center mb-8">
+            <h1 className="text-6xl md:text-7xl font-lexend-bold text-campus-accent">Home</h1>
+          </div>
+          <motion.div className="max-w-[90vw] text-center" variants={staggerChildren}>
             <motion.h1 
-              className="mb-12 font-lexend text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl"
+              className="mb-8 font-lexend text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-7xl"
               variants={textReveal}
             >
               I thought I came to study
               <br />
-              <span className="mt-2 block opacity-70">(but the campus studied me)</span>
+              <span className="mt-4 block opacity-70">(but the campus studied me)</span>
             </motion.h1>
             
             <motion.div variants={textReveal}>
@@ -98,8 +101,8 @@ const LandingPage: React.FC = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="space-y-24">
+        <div className="container mx-auto max-w-[90vw] px-4">
+          <div className="space-y-16">
             <motion.div 
               className="text-center"
               initial={{ y: 50, opacity: 0 }}
@@ -107,7 +110,7 @@ const LandingPage: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="font-lexend text-2xl font-light leading-relaxed md:text-3xl">
+              <p className="font-lexend text-3xl font-light leading-relaxed md:text-4xl">
                 This is a film about what campuses do to people.
               </p>
             </motion.div>
@@ -119,7 +122,7 @@ const LandingPage: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="font-lexend text-2xl font-light leading-relaxed md:text-3xl">
+              <p className="font-lexend text-3xl font-light leading-relaxed md:text-4xl">
                 Not the lectures.
                 <br />
                 Not the parties.
@@ -135,7 +138,7 @@ const LandingPage: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="font-lexend text-2xl font-light leading-relaxed md:text-3xl">
+              <p className="font-lexend text-3xl font-light leading-relaxed md:text-4xl">
                 It lasts 90 seconds.
                 <br />
                 That's long enough to forget where you are.
@@ -152,19 +155,19 @@ const LandingPage: React.FC = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="container mx-auto max-w-4xl px-4">
+        <div className="container mx-auto max-w-[90vw] px-4">
           <motion.div 
-            className="rounded-lg bg-black/50 p-8 backdrop-blur-sm"
+            className="rounded-lg bg-black/50 p-6 backdrop-blur-sm"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-8 font-lexend text-xl font-light text-gray-400">
+            <h2 className="mb-6 font-lexend text-2xl font-light text-gray-400">
               Production Notes
             </h2>
             
-            <div className="space-y-6 text-lg">
+            <div className="space-y-4 text-xl">
               <p>
                 Filmed guerrilla-style at NYU Abu Dhabi.
                 <br />

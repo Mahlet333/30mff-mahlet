@@ -197,10 +197,10 @@ const Analysis = () => {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-[90vw] md:max-w-[80vw] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
               {/* Left Column - Image */}
               <motion.div
-                className="relative aspect-video overflow-hidden rounded-lg cursor-pointer"
+                className="relative aspect-video overflow-hidden rounded-lg cursor-pointer w-full min-w-[350px] md:min-w-[600px]"
                 onClick={() => setIsExpanded(!isExpanded)}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -315,6 +315,10 @@ const Analysis = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <div className="w-full text-center mb-8">
+        <h1 className="text-6xl md:text-7xl font-lexend-bold text-campus-accent">Analysis</h1>
+      </div>
     </div>
   );
 };

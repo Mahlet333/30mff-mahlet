@@ -6,6 +6,7 @@ import Trace from './components/Trace';
 import landingImg from './assets/landing.png';
 import myselfImg from './assets/myself.png';
 import windChimeSound from './assets/wind-chime-atmos-185391.mp3';
+import { FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const LETTERS = [
   "I still hear the elevator at night.",
@@ -54,9 +55,9 @@ const SECTION_BG = [
 ];
 
 // Consistent font and color classes
-const headingClass = "font-lexend-bold text-4xl md:text-6xl text-white mb-8 drop-shadow-lg";
-const subheadingClass = "font-lexend-bold text-2xl md:text-3xl text-campus-accent mb-4";
-const bodyClass = "font-lexend-light text-lg md:text-xl text-white mb-4";
+const headingClass = "font-lexend-bold text-5xl md:text-7xl text-white mb-6 drop-shadow-lg";
+const subheadingClass = "font-lexend-bold text-3xl md:text-4xl text-campus-accent mb-4";
+const bodyClass = "font-lexend-light text-xl md:text-2xl text-white mb-4";
 const accentClass = "text-campus-accent";
 const sectionContentMotion = {
   initial: { opacity: 0, y: 40 },
@@ -70,6 +71,7 @@ const NAV_SECTIONS = [
   { label: 'Film', idx: 1 },
   { label: 'About', idx: 2 },
   { label: 'Analysis', idx: 3 },
+  { label: 'Trace', idx: 4 },
   { label: 'Archive', idx: 5 },
   { label: 'Filmmaker', idx: 6 },
   { label: 'Farewell', idx: 7 },
@@ -78,7 +80,7 @@ const NAV_SECTIONS = [
 function useSectionFade(sectionCount: number) {
   const [active, setActive] = useState(0);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
-
+  
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       (entries) => {
@@ -345,8 +347,8 @@ const App = () => {
               <li key={label}>
                 <button
                   className={
-                    `text-white font-lexend-light transition-colors px-2 py-1 text-base md:text-lg ` +
-                    (active === idx ? 'text-campus-accent font-bold underline' : 'hover:text-campus-accent')
+                    `text-white font-lexend-light transition-colors px-2 py-1 text-xl md:text-2xl font-bold ` +
+                    (active === idx ? 'text-campus-accent underline' : 'hover:text-campus-accent')
                   }
                   onClick={() => scrollToSection(idx)}
                 >
@@ -420,12 +422,12 @@ const App = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-white max-w-4xl mx-auto p-8 relative z-10"
+              className="text-white max-w-[90vw] mx-auto p-4 relative z-10"
             >
               <h1 className={headingClass}>I thought I came to study<br /><span className={accentClass}>(but the campus studied me)</span></h1>
               <p className="text-2xl md:text-3xl font-lexend-light mb-10 text-campus-accent">A short film about how space shapes us, even when we're not looking.</p>
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-8 font-lexend"
+                className="text-5xl md:text-6xl font-lexend-bold text-primary mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
@@ -494,17 +496,6 @@ const App = () => {
                 />
               </motion.button>
 
-              {countdown === 0 && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="mt-4 text-campus-accent text-lg font-lexend text-center"
-                >
-                  Click here to see what the campus has in store for you…
-                </motion.p>
-              )}
-
               {showIdleOverlay && active === 0 && (
                 <motion.div 
                   initial={{ opacity: 0 }}
@@ -536,11 +527,20 @@ const App = () => {
             data-sectionidx={1}
             style={{ position: 'relative', zIndex: 8 }}
           >
+            <motion.h1
+              className="text-5xl md:text-6xl font-lexend-bold text-primary mb-8"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true }}
+            >
+              Film
+            </motion.h1>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="w-full max-w-4xl aspect-video flex flex-col items-center justify-center"
+              className="w-full max-w-[90vw] md:max-w-[70vw] aspect-video flex flex-col items-center justify-center"
             >
               <YouTube 
                 videoId="AlQaNkHNYYw"
@@ -580,7 +580,7 @@ const App = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="max-w-3xl mx-auto p-8 bg-black/90 rounded-xl shadow-xl text-white text-lg md:text-xl font-lexend-light leading-relaxed"
+              className="max-w-[90vw] mx-auto p-4 bg-black/90 rounded-xl shadow-xl text-white text-xl md:text-2xl font-lexend-light leading-relaxed"
             >
               <h2 className={subheadingClass}>About the Film</h2>
               <p className="mb-4">I thought I came to study (but the campus studied me) is about a student who slowly begins to realize something unsettling. University is not just about classes or deadlines. It is about the spaces you move through every day. At first, those spaces seem ordinary: a dorm room, a humming laundry machine, a flickering hallway light, the soft glow of a laptop screen at three in the morning. But over time, the student senses something else. The campus is not just a backdrop. It is paying attention. It watches. It regulates. It does not ask anything directly, but somehow, you begin to change. Your thoughts. Your rhythms. Even your silences.</p>
@@ -625,26 +625,7 @@ const App = () => {
             data-sectionidx={5}
             style={{ position: 'relative', zIndex: 5 }}
           >
-            {/* Animated ambient background for Archive */}
-            <motion.div
-              className="absolute inset-0 z-0 pointer-events-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.25 }}
-              style={{
-                background: 'radial-gradient(ellipse at 60% 40%, #e6394633 0%, #0A0A0A 80%)',
-                transition: 'background 2s',
-              }}
-            />
-            <div className="max-w-7xl mx-auto px-4 h-full flex flex-col justify-center relative z-10">
-              <motion.h2 
-                className="text-4xl md:text-5xl font-lexend-bold mb-12 text-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-              >
-                The Archive
-              </motion.h2>
-
+            <div className="max-w-[90vw] mx-auto px-4 h-full flex flex-col justify-center relative z-10">
               <motion.div
                 className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 min-h-[420px]"
                 initial={{ opacity: 0, y: 60 }}
@@ -765,22 +746,41 @@ const App = () => {
             data-sectionidx={6}
             style={{ position: 'relative', zIndex: 4 }}
           >
+            <motion.h1
+              className="text-5xl md:text-6xl font-lexend-bold text-primary mb-8"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true }}
+            >
+              Filmmaker
+            </motion.h1>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="max-w-2xl mx-auto p-8 bg-black/90 rounded-xl shadow-xl text-white text-lg md:text-xl font-lexend-light leading-relaxed text-center"
+              className="max-w-[90vw] mx-auto p-4 bg-black/90 rounded-xl shadow-xl text-white text-xl md:text-2xl font-lexend-light leading-relaxed text-center"
             >
               <img
                 src={myselfImg}
                 alt="Portrait of Mahlet Atresaw Andarge"
                 className="mx-auto mb-6 w-32 h-32 rounded-full object-cover border-4 border-campus-accent shadow-lg"
               />
-              <h2 className="text-3xl md:text-4xl font-lexend-bold mb-6 text-campus-accent">About the Filmmaker</h2>
               <p className="mb-6">Mahlet Atresaw Andarge is a filmmaker and student at NYU Abu Dhabi. Her work explores the subtle ways environments shape our inner lives, with a focus on memory, routine, and the architecture of feeling. She believes the spaces we inhabit are never neutral—they watch, they remember, and they change us.</p>
               <h3 className="text-2xl font-lexend-bold mb-2 text-campus-accent mt-8">Contact Me</h3>
               <p className="mb-2">For questions, collaborations, or just to say hello:</p>
               <a href="mailto:your.email@domain.com" className="text-campus-accent underline text-xl font-lexend-bold hover:text-white transition-colors">your.email@domain.com</a>
+              <div className="flex justify-center gap-6 mt-6">
+                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-campus-accent hover:text-white text-3xl transition-colors">
+                  <FaInstagram />
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-campus-accent hover:text-white text-3xl transition-colors">
+                  <FaGithub />
+                </a>
+                <a href="mailto:your.email@domain.com" aria-label="Email" className="text-campus-accent hover:text-white text-3xl transition-colors">
+                  <FaEnvelope />
+                </a>
+              </div>
             </motion.div>
           </section>
 
@@ -791,21 +791,32 @@ const App = () => {
             data-sectionidx={7}
             style={{ position: 'relative', zIndex: 3 }}
           >
+            <motion.h1
+              className="text-5xl md:text-6xl font-lexend-bold text-primary mb-8"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true }}
+            >
+              Farewell
+            </motion.h1>
             <motion.div 
               className="text-center space-y-6 p-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
             >
-              <p className="text-2xl font-lexend">Deleting your visit history...</p>
-              <div className="w-64 h-1 bg-gray-800 rounded-full overflow-hidden mx-auto">
+              <p className="text-2xl font-lexend text-main mb-4">Deleting your visit history...</p>
+              <motion.div
+                className="w-64 h-1 bg-gray-800 rounded-full overflow-hidden mx-auto"
+              >
                 <motion.div
-                  className="h-full bg-campus-accent"
+                  className="h-full bg-primary"
                   initial={{ width: 0 }}
                   animate={{ width: '100%' }}
                   transition={{ duration: 3, ease: 'linear' }}
                 />
-              </div>
-              <p className="text-lg font-lexend-light text-gray-400">Just kidding. Campuses never forget.</p>
+              </motion.div>
+              <p className="text-lg md:text-xl text-secondary">Just kidding. Campuses never forget.</p>
             </motion.div>
           </section>
         </div>

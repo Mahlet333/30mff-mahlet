@@ -38,18 +38,22 @@ const Trace = () => {
         ))}
       </div>
 
-      <div className="max-w-2xl mx-auto px-4 py-16 relative z-10">
+      <div className="max-w-[90vw] mx-auto px-4 py-12 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-center space-y-8"
+          className="text-center space-y-6"
         >
-          <h2 className="text-4xl md:text-5xl font-lexend-bold mb-8">
+          <div className="w-full text-center mb-8">
+            <h1 className="text-6xl md:text-7xl font-lexend-bold text-campus-accent">Trace</h1>
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-lexend-bold mb-6">
             Leave Your Trace
           </h2>
 
-          <p className="text-xl font-lexend mb-12">
+          <p className="text-4xl md:text-5xl font-lexend mb-8">
             What did the campus steal from you?
           </p>
 
@@ -106,7 +110,7 @@ const Trace = () => {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="text-2xl font-lexend-light italic text-campus-accent"
+                  className="text-4xl font-lexend-light italic text-campus-accent"
                 >
                   "{userWord}"
                 </motion.div>

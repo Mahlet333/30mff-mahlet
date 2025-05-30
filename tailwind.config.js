@@ -12,10 +12,16 @@ export default {
         'lexend-bold': ['Lexend Bold', 'sans-serif'],
       },
       colors: {
+        'background': '#18181b',
+        'surface': '#23272f',
+        'primary': '#f59e42', // gold accent
+        'accent-red': '#E63946', // old accent, optional
+        'text-main': '#f3f4f6',
+        'text-secondary': '#a1a1aa',
         'campus': {
           dark: '#0A0A0A',
           light: '#F5F5F5',
-          accent: '#E63946',
+          accent: '#f59e42', // update campus accent to gold
         },
       },
       animation: {
@@ -37,6 +43,16 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.8' },
         },
+      },
+      fontSize: {
+        'base': '1.125rem', // 18px
+        'lg': '1.25rem',    // 20px
+        'xl': '1.5rem',     // 24px
+        '2xl': '1.875rem',  // 30px
+        '3xl': '2.25rem',   // 36px
+        '4xl': '3rem',      // 48px
+        '5xl': '3.75rem',   // 60px
+        '6xl': '4.5rem',    // 72px
       },
     },
   },

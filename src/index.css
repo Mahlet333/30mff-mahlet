@@ -91,7 +91,7 @@ html, body {
 
 /* Smooth scroll behavior for all elements */
 * {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
