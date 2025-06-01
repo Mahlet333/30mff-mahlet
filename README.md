@@ -1,44 +1,39 @@
 # I thought I came to study (but the campus studied me) - 30MFF Project
 
 ## 📝 Project Overview
-A thought-provoking interactive web experience that explores the subtle ways university campuses shape student lives. This project, created for the 30-Minute Film Festival (30MFF), combines film, interactive elements, and web design to create an immersive narrative about the unnoticed ways campus spaces influence our daily experiences.
+A web experience that explores how university campuses shape student lives through a 90-second film and interactive elements. The project combines film, interactive components, and web design to create a narrative about campus spaces and their influence on daily experiences.
 
-### 🎬 Film Description
-"I thought I came to study (but the campus studied me)" is a 90-second film that captures the unsettling realization of how campus spaces actively shape student experiences. Shot entirely on location at NYU Abu Dhabi, the film uses real campus spaces to explore themes of surveillance, routine, and the architecture of feeling.
-
-## ✨ Key Features
+## ✨ Implemented Features
 
 ### 🎥 Film Experience
-- Embedded YouTube video player with custom controls
-- Ambient sound integration for immersive viewing
+- Embedded YouTube video player with modest branding
+- Ambient sound integration with toggle control
 - Interactive countdown timer
 - Glitch text effects for thematic emphasis
 
 ### 🎯 Interactive Elements
-- **Analysis Carousel**: Interactive slideshow with detailed analysis of each scene
-  - 10 carefully curated scenes with in-depth analysis
-  - Smooth transitions and navigation controls
-  - Responsive image handling
-  - Custom overlay effects
+- **Analysis Section**
+  - Carousel with 10 curated scenes
+  - Scene details with analysis
+  - Navigation controls
+  - Image display with overlays
 
-- **Trace Section**: Interactive user engagement
-  - Word submission system
-  - Dynamic grid display of user contributions
+- **Trace Section**
+  - Word submission system (20 character limit)
+  - Dynamic grid display of submissions
+  - Local storage integration
   - Real-time updates
-  - Character limit enforcement
 
-- **Filmmaker Section**: Personal connection
-  - Professional profile presentation
-  - Social media integration
+- **Filmmaker Section**
+  - Profile presentation
+  - Social media links (Instagram, GitHub)
   - Contact information
-  - Responsive card layout
+  - Responsive layout
 
 ### 🎨 Design Features
-- Modern, minimalist aesthetic
-- Responsive design for all screen sizes
-- Custom typography using Lexend font family
+- Responsive design
+- Lexend font family integration
 - Smooth scrolling navigation
-- Dynamic progress indicators
 - Modal system for detailed content
 - Ambient sound toggle with visual feedback
 
@@ -46,27 +41,19 @@ A thought-provoking interactive web experience that explores the subtle ways uni
 
 ### Frontend Technologies
 - **HTML5**
-  - Semantic HTML structure
-  - Custom data attributes
-  - ARIA labels for accessibility
+  - Semantic structure
   - Responsive meta tags
 
 - **CSS3**
   - Flexbox and Grid layouts
-  - CSS Variables for theming
-  - Custom animations and transitions
   - Media queries for responsiveness
-  - CSS Grid for complex layouts
-  - Custom scrollbar styling
+  - Custom animations
 
 - **JavaScript (ES6+)**
-  - Modular code structure
-  - Event delegation
   - DOM manipulation
-  - Custom carousel implementation
-  - Local storage integration
+  - Event handling
+  - Local storage management
   - YouTube API integration
-  - Dynamic content loading
 
 ### 📁 Project Structure
 ```
@@ -74,120 +61,35 @@ A thought-provoking interactive web experience that explores the subtle ways uni
 │   ├── assets/        # Static assets
 │   │   ├── images/    # Project images
 │   │   └── audio/     # Sound files
-│   ├── components/    # Reusable UI components
+│   ├── components/    # UI components
 │   ├── context/       # State management
-│   ├── data/         # Static data and constants
+│   ├── data/         # Static data
 │   ├── pages/        # Page components
-│   ├── sections/     # Main page sections
+│   ├── sections/     # Main sections
 │   ├── types/        # TypeScript definitions
 │   └── utils/        # Utility functions
 ├── index.html        # Main HTML file
-├── script.js        # Main JavaScript entry point
+├── script.js        # Main JavaScript file
 └── styles.css       # Global styles
 ```
 
-### 🔧 Key Components
-
-#### Navigation
-- Sticky navigation bar
-- Smooth scroll behavior
-- Active section highlighting
-- Mobile-responsive menu
-
-#### Film Section
-- Custom video player
-- Modest branding
-- Responsive aspect ratio
-- Custom controls
-
-#### Analysis Section
-- Custom carousel implementation
-- Touch/swipe support
-- Keyboard navigation
-- Progress indicators
-- Dynamic slide loading
-
-#### Trace Section
-- Form validation
-- Real-time character count
-- Grid layout system
-- Local storage integration
-
-#### Filmmaker Section
-- Responsive card layout
-- Social media integration
-- Contact form
-- Image optimization
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Node.js (Latest LTS version recommended)
-- npm or yarn package manager
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Mahlet333/30mff-mahlet.git
-   cd 30mff-mahlet
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. Open your browser and visit `http://localhost:5173`
-
-### Building for Production
-```bash
-npm run build
-# or
-yarn build
-```
-
-## 🎯 Project Goals
-- Create an immersive narrative experience
-- Explore the relationship between space and identity
-- Engage viewers through interactive elements
-- Document the subtle ways campuses shape student lives
-- Foster reflection on personal campus experiences
-
 ## 👥 About the Filmmaker
-**Mahlet Atrsaw Andarge** is a filmmaker and student at NYU Abu Dhabi. Her work explores the subtle ways environments shape our inner lives, with a focus on memory, routine, and the architecture of feeling. She believes the spaces we inhabit are never neutral—they watch, they remember, and they change us.
+**Mahlet Atresaw Andarge** is a filmmaker and student at NYU Abu Dhabi. Her work explores the subtle ways environments shape our inner lives, with a focus on memory, routine, and the architecture of feeling.
 
 ### Contact
 - **Email:** ma7030@nyu.edu
 - **Instagram:** [@mahlet_mayat](https://www.instagram.com/mahlet_mayat/)
 - **GitHub:** [@Mahlet333](https://github.com/Mahlet333)
 
-## 🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
-- NYU Abu Dhabi for providing the filming location
-- 30MFF for the platform to showcase this work
-- All participants who contributed their traces
-- The open-source community for their invaluable tools and resources
+## 🔄 Updates
+- Initial project setup
+- Basic structure implementation
+- Component development
+- Interactive features implementation
 
+---
 
 ⭐️ If you like this project, please give it a star on GitHub!
-
-## 📞 Support
-For support, questions, or collaboration opportunities, please reach out through:
-- Email: ma7030@nyu.edu
-- GitHub Issues
-- Instagram DM: [@mahlet_mayat](https://www.instagram.com/mahlet_mayat/)
