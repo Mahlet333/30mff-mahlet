@@ -1,330 +1,364 @@
+<!-- HTML5 Document Type Declaration -->
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Document Head: Contains metadata, title, and external resources -->
   <head>
+    <!-- Character encoding declaration -->
     <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Page title -->
     <title>I thought I came to study (but the campus studied me)</title>
-  <link rel="stylesheet" href="styles.css" />
+    <!-- External stylesheet for custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts preconnect for performance optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts: Lexend font family with various weights -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- Font Awesome icons library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   </head>
-<body>
-  <script src="https://www.youtube.com/iframe_api"></script>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#film">Film</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#analysis">Analysis</a></li>
-      <li><a href="#trace">Trace</a></li>
-      <li><a href="#filmmaker">Filmmaker</a></li>
-      <li><a href="#farewell">Farewell</a></li>
-    </ul>
-  </nav>
+  <!-- Document Body: Contains all visible content -->
+  <body>
+    <!-- YouTube IFrame API for video player functionality -->
+    <script src="https://www.youtube.com/iframe_api"></script>
 
-  <!-- Landing background wrapper -->
-  <div class="landing-bg-wrapper">
-    <!-- Hero Section -->
-    <section id="home" class="section hero">
-      <div class="hero-content">
-        <h6 class="hero-bold">This is a film about what campuses do to people.</h6>
-        <h1 class="main-title accent">
-          I thought I came to study<br>
-          <span class="main-title-accent">(but the campus studied me)</span>
-        </h1>
-        <div class="hero-countdown-row">
-          <span id="countdown" class="hero-countdown"></span>
-          <span class="hero-countdown-label">until it's too late to leave</span>
+    <!-- Main Navigation Bar -->
+    <nav class="navbar">
+      <!-- Navigation menu items -->
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#film">Film</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#trace">Trace</a></li>
+        <li><a href="#filmmaker">Filmmaker</a></li>
+        <li><a href="#farewell">Farewell</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Wrapper with Background -->
+    <div class="landing-bg-wrapper">
+      <!-- Hero Section: Main landing area -->
+      <section id="home" class="section hero">
+        <div class="hero-content">
+          <!-- Hero section heading -->
+          <h6 class="hero-bold">This is a film about what campuses do to people.</h6>
+          <!-- Main title with accent styling -->
+          <h1 class="main-title accent">
+            I thought I came to study<br>
+            <span class="main-title-accent">(but the campus studied me)</span>
+          </h1>
+          <!-- Countdown timer display -->
+          <div class="hero-countdown-row">
+            <span id="countdown" class="hero-countdown"></span>
+            <span class="hero-countdown-label">until it's too late to leave</span>
+          </div>
+          <!-- Glitch effect text -->
+          <div class="glitch-row">
+            <span class="glitch accent" data-text="The campus is watching.">The campus is watching.</span>
+          </div>
+          <!-- Call to action button -->
+          <button id="scrollToFilm" class="cta-btn"><i class="fa fa-play"></i> Watch it happen</button>
         </div>
-        <div class="glitch-row">
-          <span class="glitch accent" data-text="The campus is watching.">The campus is watching.</span>
+      </section>
+
+      <!-- Film Section: Main video content -->
+      <section id="film" class="section">
+        <h1 class="section-title">Film</h1>
+        <!-- Video container with responsive aspect ratio -->
+        <div class="video-container aspect-video">
+          <!-- YouTube video embed with custom parameters -->
+          <iframe src="https://www.youtube.com/embed/cLsNL1toPjE?modestbranding=1&rel=0" allowfullscreen></iframe>
         </div>
-        <button id="scrollToFilm" class="cta-btn"><i class="fa fa-play"></i> Watch it happen</button>
+        <p class="section-desc">We didn't film it. We revealed it.</p>
+      </section>
+
+      <!-- About Section: Film description and context -->
+      <section id="about" class="section">
+        <h1 class="section-title">About the Film</h1>
+        <!-- Two-column grid layout for about content -->
+        <div class="about-grid">
+          <!-- Left column content -->
+          <div class="about-left">
+            <p class="body-text">I thought I came to study (but the campus studied me) is about a student who slowly begins to realize something unsettling. University is not just about classes or deadlines. It is about the spaces you move through every day. At first, those spaces seem ordinary: a dorm room, a humming laundry machine, a flickering hallway light, the soft glow of a laptop screen at three in the morning. But over time, the student senses something else. The campus is not just a backdrop. It is paying attention. It watches. It regulates. It does not ask anything directly, but somehow, you begin to change. Your thoughts. Your rhythms. Even your silences.</p>
+          </div>
+          <!-- Right column content -->
+          <div class="about-right">
+            <p class="body-text">The film drifts quietly through these places. There are no fast cuts. No loud sounds. It invites you to slow down and feel. To notice. To ask: what is really shaping me here? This is not a scary story. There are no monsters. No villains. Just architecture. Routine. Quiet pressure.</p>
+            <p class="body-text">Shot entirely on location at NYU Abu Dhabi, using real campus spaces, the film tries to capture what it actually feels like to live on campus. Being busy but still stuck. Being watched, but not by cameras. Just by the space itself. The building. The air. The system. The film is short. Only ninety seconds. But it might stay with you longer.</p>
+          </div>
+        </div>
+        <!-- Centered text with accent styling -->
+        <div class="about-centered-text">
+          <p class="body-text italic accent">What space studied you?</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Analysis Section: Scene-by-scene breakdown -->
+    <section id="analysis" class="section">
+      <h1 class="section-title">Analysis</h1>
+      <!-- Carousel container for scene analysis -->
+      <div class="carousel-container">
+        <!-- Slides container -->
+        <div class="carousel-slides">
+          <!-- Individual slides for each scene analysis -->
+          <!-- Each slide contains: background image, overlay, content with image and text -->
+          <!-- Slide 1: Golden Grass -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/1.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/1.png" alt="Analysis thumbnail 1" />
+              </div>
+              <div class="slide-text">
+                <h2>The Golden Grass</h2>
+                <p><b>The Surface:</b> Sunlight filters through tall grass near a tree. Still, quiet.</p>
+                <p><b>What the Campus Was Doing:</b> This isn't just landscaping—it's a mood regulator. The soft movement of grass under light slows your pace without asking.</p>
+                <p><b>Missed Detail:</b> <i>The grass moves only on one side of the frame—just enough to feel intentional.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"Today I actually saw it. The light hit different. So did the silence."</span></p>
+                <p><b>Reflect:</b> How often do you see the space around you instead of just moving through it?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/2.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/2.png" alt="Analysis thumbnail 2" />
+              </div>
+              <div class="slide-text">
+                <h2>The Library at 3AM</h2>
+                <p><b>The Surface:</b> Pale morning light hitting the library's empty courtyard. Stark shadows.</p>
+                <p><b>What the Campus Was Doing:</b> Even in silence, the campus reminds you it's awake. Every surface reflects the fact that your body is still here, still working.</p>
+                <p><b>Missed Detail:</b> <i>The same student figure appears in three windows in different angles.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"Just finish and move on."</span></p>
+                <p><b>Reflect:</b> What does it mean to stay longer than your mind wants to?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/3.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/3.png" alt="Analysis thumbnail 3" />
+              </div>
+              <div class="slide-text">
+                <h2>The Back Staircase</h2>
+                <p><b>The Surface:</b> A bare stairwell, lit by a single overexposed light.</p>
+                <p><b>What the Campus Was Doing:</b> Movement here is mechanical. It's meant to move you fast—no time for thoughts. Just up or down.</p>
+                <p><b>Missed Detail:</b> <i>The stair edges flicker for one second like a skipped frame.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"Do it again. That's the rule, right?"</span></p>
+                <p><b>Reflect:</b> What parts of your life feel like going up stairs that never lead anywhere?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/4.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/4.png" alt="Analysis thumbnail 4" />
+              </div>
+              <div class="slide-text">
+                <h2>The Laundry Room</h2>
+                <p><b>The Surface:</b> A sterile corner with stacked chairs and no people.</p>
+                <p><b>What the Campus Was Doing:</b> Designed for solitude, but not comfort. The cold materials, the echoing hum—it's a room that keeps you moving.</p>
+                <p><b>Missed Detail:</b> <i>One chair leg hovers slightly off the ground—always off balance.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"Even the laundry has a system. Maybe I needed that too."</span></p>
+                <p><b>Reflect:</b> When was the last time silence made you uncomfortable?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/5.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/5.png" alt="Analysis thumbnail 5" />
+              </div>
+              <div class="slide-text">
+                <h2>The Cat with the Bird</h2>
+                <p><b>The Surface:</b> A white cat with a black head carries a bird gently in its mouth.</p>
+                <p><b>What the Campus Was Doing:</b> This is instinct—not decorum. The campus includes life that doesn't follow the rules of efficiency or order.</p>
+                <p><b>Missed Detail:</b> <i>The bird's wing moves once before going still.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"Some things thrive just by being allowed to."</span></p>
+                <p><b>Reflect:</b> What part of you would survive without needing to be managed?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/6.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/6.png" alt="Analysis thumbnail 6" />
+              </div>
+              <div class="slide-text">
+                <h2>The Elevator Wall</h2>
+                <p><b>The Surface:</b> Scribbled markings scratched into a faded elevator panel.</p>
+                <p><b>What the Campus Was Doing:</b> It moves everyone, but remembers no one—unless someone writes it in.</p>
+                <p><b>Missed Detail:</b> <i>The word "stay" is etched into the far corner.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"I walked through this a hundred times. Today I actually saw it."</span></p>
+                <p><b>Reflect:</b> When was the last time you left behind a trace?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 7 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/7.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/7.png" alt="Analysis thumbnail 7" />
+              </div>
+              <div class="slide-text">
+                <h2>The Griddle Station</h2>
+                <p><b>The Surface:</b> A gloved hand flips vegetables on a hot grill. Oil crackles.</p>
+                <p><b>What the Campus Was Doing:</b> Precision over presence. Everything looks like care, but it's performed to keep things running—not to connect.</p>
+                <p><b>Missed Detail:</b> <i>One glove is slightly torn at the wrist.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"This place isn't soft, but it's honest."</span></p>
+                <p><b>Reflect:</b> When does service feel like routine instead of care?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 8 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/8.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/8.png" alt="Analysis thumbnail 8" />
+              </div>
+              <div class="slide-text">
+                <h2>The Surveillance Glass</h2>
+                <p><b>The Surface:</b> A quiet corner of campus just before dusk, camera visible, glass reflecting trees.</p>
+                <p><b>What the Campus Was Doing:</b> The camera watches. The glass reflects. Either way—you are seen, or you're mirrored.</p>
+                <p><b>Missed Detail:</b> <i>The glass shows two copies of the same student walking in opposite directions.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"It responds. To how you see it. To how you move through it."</span></p>
+                <p><b>Reflect:</b> Who do you become when the space is silently watching?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 9 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/9.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/9.png" alt="Analysis thumbnail 9" />
+              </div>
+              <div class="slide-text">
+                <h2>The Dorm Bed</h2>
+                <p><b>The Surface:</b> A dark bedroom with wrinkled sheets and morning light just peeking through.</p>
+                <p><b>What the Campus Was Doing:</b> It gives you the illusion of pause—without comfort. The day already started before you did.</p>
+                <p><b>Missed Detail:</b> <i>The water bottle by the window is untouched in every scene.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"Sleep when I can. Wake up late."</span></p>
+                <p><b>Reflect:</b> What does your bed know about you that your friends don't?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 10 -->
+          <div class="full-bg-slide" style="background-image: url('src/assets/10.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-image">
+                <img src="src/assets/10.png" alt="Analysis thumbnail 10" />
+              </div>
+              <div class="slide-text">
+                <h2>The Study Glow</h2>
+                <p><b>The Surface:</b> A glowing laptop screen is the only light in the room. The user sits in near darkness.</p>
+                <p><b>What the Campus Was Doing:</b> It teaches you to chase deadlines in the dark, to keep showing up even when you've disappeared from yourself.</p>
+                <p><b>Missed Detail:</b> <i>The screen briefly shows the word "break" before switching tabs.</i></p>
+                <p><b>Line from Script:</b> <span class="accent">"Back-to-back deadlines. No room to think."</span></p>
+                <p><b>Reflect:</b> What would you say if the glow went away?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel navigation controls -->
+        <button class="carousel-control prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-control next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        <!-- Carousel indicators container -->
+        <div class="carousel-indicators">
+          <!-- Indicator dots added dynamically via JavaScript -->
+        </div>
       </div>
     </section>
-    <!-- Film Section -->
-    <section id="film" class="section">
-      <h1 class="section-title">Film</h1>
-      <div class="video-container aspect-video">
-        <iframe src="https://www.youtube.com/embed/aX1HENB2Q6krkkTa?modestbranding=1&rel=0" allowfullscreen></iframe>
-      </div>
-      <p class="section-desc">We didn't film it. We revealed it.</p>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h1 class="section-title">About the Film</h1>
-      <div class="about-grid">
-        <div class="about-left">
-          
-          <p class="body-text">I thought I came to study (but the campus studied me) is about a student who slowly begins to realize something unsettling. University is not just about classes or deadlines. It is about the spaces you move through every day. At first, those spaces seem ordinary: a dorm room, a humming laundry machine, a flickering hallway light, the soft glow of a laptop screen at three in the morning. But over time, the student senses something else. The campus is not just a backdrop. It is paying attention. It watches. It regulates. It does not ask anything directly, but somehow, you begin to change. Your thoughts. Your rhythms. Even your silences.</p>
-    
-          
-        </div>
-        <div class="about-right">
-          <p class="body-text">The film drifts quietly through these places. There are no fast cuts. No loud sounds. It invites you to slow down and feel. To notice. To ask: what is really shaping me here? This is not a scary story. There are no monsters. No villains. Just architecture. Routine. Quiet pressure.</p>
-          <p class="body-text">Shot entirely on location at NYU Abu Dhabi, using real campus spaces, the film tries to capture what it actually feels like to live on campus. Being busy but still stuck. Being watched, but not by cameras. Just by the space itself. The building. The air. The system. The film is short. Only ninety seconds. But it might stay with you longer.</p>
-    
-          
-        </div>
-      </div>
-      <div class="about-centered-text">
-        <p class="body-text italic accent">What space studied you?</p>
+
+    <!-- Trace Section: User interaction and submissions -->
+    <section id="trace" class="section">
+      <h1 class="section-title">Trace</h1>
+      <div class="trace-content">
+        <h2 class="subheading">Leave Your Trace</h2>
+        <p class="body-text">What did the campus steal from you?</p>
+        <!-- User submission form -->
+        <form id="traceForm">
+          <input type="text" id="traceInput" maxlength="20" placeholder="Enter one word" class="trace-input" />
+          <button type="submit" class="cta-btn"><i class="fa fa-paper-plane"></i> Submit to the Archive</button>
+        </form>
+        <!-- Grid display for user submissions -->
+        <div id="traceGrid" class="trace-grid"></div>
       </div>
     </section>
-  </div>
 
-  <!-- Analysis Section -->
-  <section id="analysis" class="section">
-    <h1 class="section-title">Analysis</h1>
-    <div class="carousel-container">
-      <div class="carousel-slides">
-        <!-- Slides will be dynamically added here by JavaScript -->
-        <!-- Slide 1 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/1.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/1.png" alt="Analysis thumbnail 1" />
-            </div>
-            <div class="slide-text">
-              <h2>The Golden Grass</h2>
-              <p><b>The Surface:</b> Sunlight filters through tall grass near a tree. Still, quiet.</p>
-              <p><b>What the Campus Was Doing:</b> This isn't just landscaping—it's a mood regulator. The soft movement of grass under light slows your pace without asking.</p>
-              <p><b>Missed Detail:</b> <i>The grass moves only on one side of the frame—just enough to feel intentional.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“Today I actually saw it. The light hit different. So did the silence.”</span></p>
-              <p><b>Reflect:</b> How often do you see the space around you instead of just moving through it?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/2.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/2.png" alt="Analysis thumbnail 2" />
-            </div>
-            <div class="slide-text">
-              <h2>The Library at 3AM</h2>
-              <p><b>The Surface:</b> Pale morning light hitting the library's empty courtyard. Stark shadows.</p>
-              <p><b>What the Campus Was Doing:</b> Even in silence, the campus reminds you it's awake. Every surface reflects the fact that your body is still here, still working.</p>
-              <p><b>Missed Detail:</b> <i>The same student figure appears in three windows in different angles.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“Just finish and move on.”</span></p>
-              <p><b>Reflect:</b> What does it mean to stay longer than your mind wants to?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/3.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/3.png" alt="Analysis thumbnail 3" />
-            </div>
-            <div class="slide-text">
-              <h2>The Back Staircase</h2>
-              <p><b>The Surface:</b> A bare stairwell, lit by a single overexposed light.</p>
-              <p><b>What the Campus Was Doing:</b> Movement here is mechanical. It's meant to move you fast—no time for thoughts. Just up or down.</p>
-              <p><b>Missed Detail:</b> <i>The stair edges flicker for one second like a skipped frame.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“Do it again. That's the rule, right?”</span></p>
-              <p><b>Reflect:</b> What parts of your life feel like going up stairs that never lead anywhere?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/4.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/4.png" alt="Analysis thumbnail 4" />
-            </div>
-            <div class="slide-text">
-              <h2>The Laundry Room</h2>
-              <p><b>The Surface:</b> A sterile corner with stacked chairs and no people.</p>
-              <p><b>What the Campus Was Doing:</b> Designed for solitude, but not comfort. The cold materials, the echoing hum—it's a room that keeps you moving.</p>
-              <p><b>Missed Detail:</b> <i>One chair leg hovers slightly off the ground—always off balance.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“Even the laundry has a system. Maybe I needed that too.”</span></p>
-              <p><b>Reflect:</b> When was the last time silence made you uncomfortable?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 5 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/5.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/5.png" alt="Analysis thumbnail 5" />
-            </div>
-            <div class="slide-text">
-              <h2>The Cat with the Bird</h2>
-              <p><b>The Surface:</b> A white cat with a black head carries a bird gently in its mouth.</p>
-              <p><b>What the Campus Was Doing:</b> This is instinct—not decorum. The campus includes life that doesn't follow the rules of efficiency or order.</p>
-              <p><b>Missed Detail:</b> <i>The bird's wing moves once before going still.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“Some things thrive just by being allowed to.”</span></p>
-              <p><b>Reflect:</b> What part of you would survive without needing to be managed?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 6 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/6.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/6.png" alt="Analysis thumbnail 6" />
-            </div>
-            <div class="slide-text">
-              <h2>The Elevator Wall</h2>
-              <p><b>The Surface:</b> Scribbled markings scratched into a faded elevator panel.</p>
-              <p><b>What the Campus Was Doing:</b> It moves everyone, but remembers no one—unless someone writes it in.</p>
-              <p><b>Missed Detail:</b> <i>The word "stay" is etched into the far corner.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“I walked through this a hundred times. Today I actually saw it.”</span></p>
-              <p><b>Reflect:</b> When was the last time you left behind a trace?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 7 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/7.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/7.png" alt="Analysis thumbnail 7" />
-            </div>
-            <div class="slide-text">
-              <h2>The Griddle Station</h2>
-              <p><b>The Surface:</b> A gloved hand flips vegetables on a hot grill. Oil crackles.</p>
-              <p><b>What the Campus Was Doing:</b> Precision over presence. Everything looks like care, but it's performed to keep things running—not to connect.</p>
-              <p><b>Missed Detail:</b> <i>One glove is slightly torn at the wrist.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“This place isn't soft, but it's honest.”</span></p>
-              <p><b>Reflect:</b> When does service feel like routine instead of care?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 8 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/8.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/8.png" alt="Analysis thumbnail 8" />
-            </div>
-            <div class="slide-text">
-              <h2>The Surveillance Glass</h2>
-              <p><b>The Surface:</b> A quiet corner of campus just before dusk, camera visible, glass reflecting trees.</p>
-              <p><b>What the Campus Was Doing:</b> The camera watches. The glass reflects. Either way—you are seen, or you're mirrored.</p>
-              <p><b>Missed Detail:</b> <i>The glass shows two copies of the same student walking in opposite directions.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“It responds. To how you see it. To how you move through it.”</span></p>
-              <p><b>Reflect:</b> Who do you become when the space is silently watching?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 9 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/9.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/9.png" alt="Analysis thumbnail 9" />
-            </div>
-            <div class="slide-text">
-              <h2>The Dorm Bed</h2>
-              <p><b>The Surface:</b> A dark bedroom with wrinkled sheets and morning light just peeking through.</p>
-              <p><b>What the Campus Was Doing:</b> It gives you the illusion of pause—without comfort. The day already started before you did.</p>
-              <p><b>Missed Detail:</b> <i>The water bottle by the window is untouched in every scene.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“Sleep when I can. Wake up late.”</span></p>
-              <p><b>Reflect:</b> What does your bed know about you that your friends don't?</p>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 10 -->
-        <div class="full-bg-slide" style="background-image: url('src/assets/10.png');">
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-image">
-              <img src="src/assets/10.png" alt="Analysis thumbnail 10" />
-            </div>
-            <div class="slide-text">
-              <h2>The Study Glow</h2>
-              <p><b>The Surface:</b> A glowing laptop screen is the only light in the room. The user sits in near darkness.</p>
-              <p><b>What the Campus Was Doing:</b> It teaches you to chase deadlines in the dark, to keep showing up even when you've disappeared from yourself.</p>
-              <p><b>Missed Detail:</b> <i>The screen briefly shows the word "break" before switching tabs.</i></p>
-              <p><b>Line from Script:</b> <span class="accent">“Back-to-back deadlines. No room to think.”</span></p>
-              <p><b>Reflect:</b> What would you say if the glow went away?</p>
-            </div>
+    <!-- Filmmaker Section: Creator information -->
+    <section id="filmmaker" class="section">
+      <h1 class="section-title">Filmmaker</h1>
+      <div class="filmmaker-card">
+        <!-- Filmmaker portrait -->
+        <img src="src/assets/myself.png" alt="Portrait of Mahlet Atresaw Andarge" class="filmmaker-img" />
+        <!-- Filmmaker information and contact details -->
+        <div class="filmmaker-text-content">
+          <h2 class="subheading">About the Filmmaker</h2>
+          <p class="body-text">I'm Mahlet Atrsaw Andargei, a filmmaker and computer science student at NYU Abu Dhabi, originally from Ethiopia. I also study economics and math, which probably explains why I care so much about patterns—how things repeat, break, or quietly shift over time. I'm drawn to the parts of life that don't always get noticed: the routines that shape us, the spaces we pass through without thinking, the feelings that sit in silence. Whether I'm making a short film, coding a project, or just observing, I'm trying to understand how environments hold memory, emotion, and power. I don't think spaces are neutral. They watch us. They shape us. And sometimes, they speak when we're finally quiet enough to listen.</p>
+          <h3 class="subheading">Contact Me</h3>
+          <p class="body-text">For questions, collaborations, or just to say hello:</p>
+          <!-- Social media and contact links -->
+          <div class="filmmaker-socials">
+            <a href="https://www.instagram.com/mahlet_mayat/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://github.com/Mahlet333" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            <a href="ma7030@nyu.edu"><i class="fa fa-envelope"></i> Email</a>
           </div>
         </div>
       </div>
-      <button class="carousel-control prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
-      <button class="carousel-control next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
-      <div class="carousel-indicators">
-        <!-- Indicator dots will be added here by JavaScript -->
+    </section>
+
+    <!-- Farewell Section: Final interaction -->
+    <section id="farewell" class="section">
+      <h1 class="section-title">Farewell</h1>
+      <div class="farewell-content">
+        <p class="body-text">Deleting your visit history...</p>
+        <!-- Progress bar for visual feedback -->
+        <div class="progress-bar-bg">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p class="body-text muted">Just kidding. Campuses never forget.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Trace Section -->
-  <section id="trace" class="section">
-    <h1 class="section-title">Trace</h1>
-    <div class="trace-content">
-      <h2 class="subheading">Leave Your Trace</h2>
-      <p class="body-text">What did the campus steal from you?</p>
-      <form id="traceForm">
-        <input type="text" id="traceInput" maxlength="20" placeholder="Enter one word" class="trace-input" />
-        <button type="submit" class="cta-btn"><i class="fa fa-paper-plane"></i> Submit to the Archive</button>
-      </form>
-      <div id="traceGrid" class="trace-grid"></div>
-    </div>
-  </section>
+    <!-- Ambient Sound: Background audio element -->
+    <audio id="ambientSound" src="src/assets/wind-chime-atmos-185391.mp3" loop></audio>
+    <!-- Sound toggle button with icons -->
+    <button id="toggleSound" class="ambient-btn" aria-label="Toggle Ambient Sound">
+      <i class="fas fa-volume-up" style="display: none;"></i>
+      <i class="fas fa-volume-mute"></i>
+    </button>
 
-  <!-- Filmmaker Section -->
-  <section id="filmmaker" class="section">
-    <h1 class="section-title">Filmmaker</h1>
-    <div class="filmmaker-card">
-      <img src="src/assets/myself.png" alt="Portrait of Mahlet Atresaw Andarge" class="filmmaker-img" />
-      <div class="filmmaker-text-content">
-        <h2 class="subheading">About the Filmmaker</h2>
-        <p class="body-text">I'm Mahlet Atrsaw Andargei, a filmmaker and computer science student at NYU Abu Dhabi, originally from Ethiopia. I also study economics and math, which probably explains why I care so much about patterns—how things repeat, break, or quietly shift over time. I’m drawn to the parts of life that don’t always get noticed: the routines that shape us, the spaces we pass through without thinking, the feelings that sit in silence. Whether I’m making a short film, coding a project, or just observing, I’m trying to understand how environments hold memory, emotion, and power. I don’t think spaces are neutral. They watch us. They shape us. And sometimes, they speak when we’re finally quiet enough to listen.</p>
-        <h3 class="subheading">Contact Me</h3>
-        <p class="body-text">For questions, collaborations, or just to say hello:</p>
-        <div class="filmmaker-socials">
-          <a href="https://www.instagram.com/mahlet_mayat/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://github.com/Mahlet333" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-          <a href="ma7030@nyu.edu"><i class="fa fa-envelope"></i> Email</a>
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- Modal Structure: For dynamic content display -->
+    <div id="modalOverlay" class="modal-overlay">
+      <div id="modalContent" class="modal-content">
+        <button id="closeModal" class="close-button">&times;</button>
+        <div id="modalBody" class="modal-body">
+          <!-- Modal content loaded dynamically via JavaScript -->
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Farewell Section -->
-  <section id="farewell" class="section">
-    <h1 class="section-title">Farewell</h1>
-    <div class="farewell-content">
-      <p class="body-text">Deleting your visit history...</p>
-      <div class="progress-bar-bg">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
-      <p class="body-text muted">Just kidding. Campuses never forget.</p>
-    </div>
-  </section>
-
-  <!-- Ambient Sound -->
-  <audio id="ambientSound" src="src/assets/wind-chime-atmos-185391.mp3" loop></audio>
-  <button id="toggleSound" class="ambient-btn" aria-label="Toggle Ambient Sound">
-    <i class="fas fa-volume-up" style="display: none;"></i>
-    <i class="fas fa-volume-mute"></i>
-  </button>
-
-  <script src="script.js"></script>
-
-  <!-- Modal Structure -->
-  <div id="modalOverlay" class="modal-overlay">
-    <div id="modalContent" class="modal-content">
-      <button id="closeModal" class="close-button">&times;</button>
-      <div id="modalBody" class="modal-body">
-        <!-- Content will be loaded here by JavaScript -->
-      </div>
-    </div>
-  </div>
 
   </body>
 </html>
