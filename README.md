@@ -74,7 +74,7 @@ A web experience that explores how university campuses shape student lives throu
 ```
 
 ## 👥 About the Filmmaker
-**Mahlet Atresaw Andarge** is a filmmaker and student at NYU Abu Dhabi. Her work explores the subtle ways environments shape our inner lives, with a focus on memory, routine, and the architecture of feeling.
+**Mahlet Atrsaw Andargei** is a filmmaker and student at NYU Abu Dhabi. Her work explores the subtle ways environments shape our inner lives, with a focus on memory, routine, and the architecture of feeling.
 
 ### Contact
 - **Email:** ma7030@nyu.edu
