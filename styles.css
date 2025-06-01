@@ -116,6 +116,7 @@ nav.navbar a:hover, nav.navbar a:focus {
   justify-content: center;
   background: transparent;
   padding: 0;
+  padding-top: 4rem;
   position: relative;
 }
 .hero-content {
@@ -124,9 +125,9 @@ nav.navbar a:hover, nav.navbar a:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
-  gap: 0.7rem;
+  gap: 0.5rem;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -136,13 +137,23 @@ nav.navbar a:hover, nav.navbar a:focus {
 .main-title, .main-title-accent {
   text-align: center;
   margin-bottom: 0.2em;
+  font-size: 5rem;
+  font-family: 'Lexend', sans-serif;
+}
+.main-title-accent {
+  font-size: 0.6em;
+  display: block;
+  margin-top: -0.3em;
 }
 .hero-bold {
   text-align: center;
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin: 1.2rem 0 0.7rem 0;
+  margin: 1.2rem 0 0;
   line-height: 1.1;
+  position: relative;
+  z-index: 3;
+  font-style: italic;
 }
 .hero-desc {
   margin-bottom: 0.7rem;
@@ -178,7 +189,7 @@ nav.navbar a:hover, nav.navbar a:focus {
 }
 .hero-countdown-label {
   font-size: 1rem;
-  color: #a1a1aa;
+  color: #fff;
 }
 .glitch-row {
   margin-bottom: 1.5rem;
@@ -187,7 +198,7 @@ nav.navbar a:hover, nav.navbar a:focus {
   position: relative;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #f59e42;
+  color: #e74c3c;
   display: inline-block;
   text-shadow: none;
   animation: glitch-anim 1.2s infinite linear alternate-reverse, pulse-glow 2s infinite alternate;
@@ -204,14 +215,14 @@ nav.navbar a:hover, nav.navbar a:focus {
 .glitch::before {
   top: 0;
   left: 2px;
-  color: #f59e42;
+  color: #c0392b;
   text-shadow: none;
   animation: glitch-anim 1.2s infinite linear alternate-reverse;
 }
 .glitch::after {
   top: 0;
   left: -2px;
-  color: #f59e42;
+  color: #e74c3c;
   text-shadow: none;
   animation: glitch-anim2 1.2s infinite linear alternate-reverse;
 }
@@ -230,9 +241,9 @@ nav.navbar a:hover, nav.navbar a:focus {
   100% { clip: rect(0, 9999px, 100%, 0); }
 }
 @keyframes pulse-glow {
-  0% { text-shadow: 0 0 5px rgba(245, 158, 66, 0.4); }
-  50% { text-shadow: 0 0 20px rgba(245, 158, 66, 0.8); }
-  100% { text-shadow: 0 0 5px rgba(245, 158, 66, 0.4); }
+  0% { text-shadow: 0 0 5px rgba(231, 76, 60, 0.4); }
+  50% { text-shadow: 0 0 20px rgba(231, 76, 60, 0.8); }
+  100% { text-shadow: 0 0 5px rgba(231, 76, 60, 0.4); }
 }
 .hero-muted {
   color: #a1a1aa;
@@ -672,4 +683,57 @@ nav.navbar a:hover, nav.navbar a:focus {
   .slide-text {
     font-size: 1rem;
   }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background: #23272f;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto; /* Add scroll if content overflows */
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f3f4f6;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  // ... existing code ...
 } 

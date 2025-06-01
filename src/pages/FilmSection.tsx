@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import YouTube from 'react-youtube';
 import { FILM_ID } from '../data/filmData';
 import Button from '../components/ui/Button';
 import { fadeIn } from '../utils/animations';
@@ -9,17 +8,6 @@ import { fadeIn } from '../utils/animations';
 const FilmSection: React.FC = () => {
   const navigate = useNavigate();
   const [hasWatched, setHasWatched] = useState(false);
-  
-  const opts = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      controls: 1,
-      rel: 0,
-      modestbranding: 1,
-    },
-  };
   
   const handleVideoEnd = () => {
     setHasWatched(true);
@@ -49,12 +37,14 @@ const FilmSection: React.FC = () => {
         
         <div className="relative mx-auto overflow-hidden">
           <div className="aspect-w-16 aspect-h-9 w-full">
-            <YouTube
-              videoId={FILM_ID}
-              opts={opts}
-              onEnd={handleVideoEnd}
-              className="youtube-container"
-            />
+            <iframe
+              src={`https://www.youtube.com/embed/${FILM_ID}?controls=1&rel=0&modestbranding=1`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-screen"
+              allowFullScreen
+              className="youtube-container absolute inset-0 h-full w-full"
+              title="YouTube video player"
+            >
+            </iframe>
           </div>
         </div>
         
